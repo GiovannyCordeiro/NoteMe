@@ -24,7 +24,25 @@
   "forwardPorts": [3000, 5432, 6379],
 
   // Configure tool-specific properties.
-  // "customizations": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // rails
+        "vortizhe.simple-ruby-erb",
+        "CraigMaslowski.erb",
+        // front
+        "bradlc.vscode-tailwindcss",
+        "stivo.tailwind-fold",
+        // development
+        "connorshea.vscode-ruby-test-adapter",
+        "kaiwood.endwise",
+        "alefragnani.Bookmarks",
+        "mikestead.dotenv",
+        "vincaslt.highlight-matching-tag",
+        "oderwat.indent-rainbow"
+      ]
+    }
+  },
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root",
