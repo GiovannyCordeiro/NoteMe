@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    // rails
+    "vortizhe.simple-ruby-erb",
+    "CraigMaslowski.erb",
+    // front
+    "bradlc.vscode-tailwindcss",
+    "stivo.tailwind-fold",
+    // development
+    "connorshea.vscode-ruby-test-adapter",
+    "kaiwood.endwise",
+    "alefragnani.Bookmarks",
+    "mikestead.dotenv",
+    "vincaslt.highlight-matching-tag"
+  ]
+}
