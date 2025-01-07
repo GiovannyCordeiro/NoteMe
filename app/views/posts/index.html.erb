@@ -1,22 +1,16 @@
 <div class="flex w-full h-screen bg-rose">
-  <aside class="flex flex-col w-1/12 h-screen bg-gray-300 justify-between items-center shadown-lg" >
-    <div class="w-7 h-7 bg-gray-800"></div>
-    <div class="w-7 h-7 bg-gray-800"></div>
-    <div class="w-7 h-7 bg-gray-800"></div>
-  </aside>
+  <%= render 'shared/aside' %>
   <section class="w-full h-full bg-gray-400 flex flex-col p-12">
     <div class="flex w-full bg-gray-800 items-center justify-between">
       <input type="text" name="" id="" placeholder="Search notes" />
       <div class="w-7 h-7 bg-gray-900"></div>
     </div>
-    <div class="w-full bg-gray-800 mt-12">
+    <div class="w-full mt-12">
       <h2 class="text-3xl">Hello Fulano! 👋🏼</h2>
       <p class="mt-2">All your notes are here, in one place!</p>
     </div>
-    <div class="w-full h-full bg-gray-300 mt-12 flex flex-wrap gap-14">
-      <div class="w-2/12 h-2/6 bg-gray-800">
-        djskdjsk
-      </div>
+    <div class="w-full h-full mt-12 flex flex-wrap gap-14">
+      <%= render 'task' %>
     </div>
   </section>
 </div>
