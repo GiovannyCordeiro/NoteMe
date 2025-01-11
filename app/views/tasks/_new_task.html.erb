@@ -1,0 +1,11 @@
+<div data-controller="task" class="w-2/12 h-2/6 p-6 bg-opaque-light-cyan rounded-lg flex flex-col justify-between drop-shadow-md">
+  <%= form_with(url: tasks_path, method: :post, local: false, html: { class: "task-form" }) do %>
+    <textarea
+      name="task[description]"
+      placeholder="Type your note..."
+      class="w-full h-full border-none bg-opaque-light-cyan focus:outline-none focus:ring-0 resize-none"
+      data-action="keydown->task#submitOnEnter">
+    </textarea>
+    <p class="text-sm">Feb, 10 2025</p>
+  <% end %>
+</div>
