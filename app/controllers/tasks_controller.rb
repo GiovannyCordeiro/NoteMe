@@ -1,11 +1,21 @@
 class TasksController < ApplicationController
   def index
+    @tasks = Task.all
   end
 
   def create
-    @task = Task.create(task_params)
-
-    render :index
+    @task = Task.new(task_params)
+    if @task.save
+      respond_to do |format|
+        format.turbo_stream
+        format.html { redirect_to tasks_path, notice: "Task was successfully created." }
+      end
+    else
+      respond_to do |format|
+        format.turbo_stream
+        format.html { render :index, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
