@@ -1,6 +1,8 @@
-<div draggable="true" class="w-2/12 h-2/6 p-6 bg-semantic-green rounded-lg flex flex-col justify-between drop-shadow-md">
-  <p class="text-lg">
-    <%= task.description %>
-  </p>
-  <p class="text-sm">Feb, 10 2025</p>
-</div>
+<%= turbo_frame_tag task, class: "w-2/12 h-2/6" do %>
+  <div draggable="true" class="w-full h-full p-6 bg-semantic-green rounded-lg flex flex-col justify-between drop-shadow-md">
+    <p class="text-lg">
+      <%= task.description %>
+    </p>
+    <p class="text-sm">Feb, 10 2025</p>
+  </div>
+<% end %>

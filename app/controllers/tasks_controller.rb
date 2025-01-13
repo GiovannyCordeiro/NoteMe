@@ -13,7 +13,7 @@ class TasksController < ApplicationController
     else
       respond_to do |format|
         format.turbo_stream
-        format.html { render :index, status: :unprocessable_entity }
+        format.html { redirec_to tasks_path, status: :unprocessable_entity }
       end
     end
   end

@@ -11,14 +11,14 @@
       <h2 class="text-3xl">Hello Fulano! 👋🏼</h2>
       <p class="mt-2">All your notes are here, in one place!</p>
     </div>
-    <div class="w-full h-full mt-12 flex flex-wrap gap-14 pl-16">
+    <div id="tasks" class="w-full h-full mt-12 flex flex-wrap gap-14 pl-16">
       <%= render 'new_task'%>
       <% @tasks.each do |task| %>
-        <%= render 'task', task: task %>
+          <%= render 'task', task: task %>
       <% end %>
     </div>
     <section class="w-full h-1/6 flex items-center justify-center">
-      <div id="tasks" class="w-3/5 h-full flex flex-col items-center justify-center gap-2">
+      <div class="w-3/5 h-full flex flex-col items-center justify-center gap-2">
         <%= image_tag 'icons/trash.svg', class:'w-12' %>
         <p class="text-red-500 text-sm">Drag to Delete Note</p>
       </div>
