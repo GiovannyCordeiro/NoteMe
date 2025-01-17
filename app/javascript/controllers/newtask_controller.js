@@ -7,6 +7,7 @@ export default class extends Controller {
       event.preventDefault();
       const form = this.element.firstElementChild;
       form.requestSubmit();
+      event.currentTarget.value = ''
     }
   }
 }
