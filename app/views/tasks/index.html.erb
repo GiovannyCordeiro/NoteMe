@@ -17,7 +17,11 @@
           <%= render 'task', task: task %>
       <% end %>
     </div>
-    <section class="w-full h-1/6 flex items-center justify-center">
+    <section
+      data-controller="task"
+      data-task-target="deleteZone"
+      data-action="dragover->task#dragOver drop->task#drop"
+      class="w-full h-1/6 flex items-center justify-center">
       <div class="w-3/5 h-full flex flex-col items-center justify-center gap-2">
         <%= image_tag 'icons/trash.svg', class:'w-12' %>
         <p class="text-red-500 text-sm">Drag to Delete Note</p>
