@@ -1,20 +1,13 @@
 import { Controller } from "@hotwired/stimulus";
 
+let idElementDell = null
+let targetElementDell = null
 export default class extends Controller {;
   static targets = [ "deleteZone" ]
-  static values = {
-    dragged: { type: String, default: 'algo'}
-  }
-
-
-  // connect(){
-  //   this.draggedElement = null
-  // }
 
   startDrag(event) {
-    console.log("LOG Start DraggedElement", this.draggedelement)
-    this.draggedValue = event.currentTarget.outerHTML;
-    console.log("LOG Start DraggedElement", this.draggedValue)
+    idElementDell = parseInt(event.currentTarget.getAttribute('data-id'))
+    targetElementDell = event.currentTarget.parentElement
   }
 
   dragOver(event) {
@@ -23,23 +16,22 @@ export default class extends Controller {;
 
   drop(event) {
     event.preventDefault();
-    console.log("LOG Drop DraggedElement", this.draggedValue)
 
-    // if (deleteZone && this.draggedElement) {
-    //   const taskId = this.draggedElement.dataset.id;
+    if (idElementDell) {
 
-    //   fetch(`/tasks/${taskId}`, {
-    //     method: "DELETE",
-    //     headers: {
-    //       "X-CSRF-Token": document.querySelector("meta[name='csrf-token']").content
-    //     }
-    //   }).then(response => {
-    //     if (response.ok) {
-    //       this.draggedElement.remove();
-    //     }
-    //   });
+      fetch(`/tasks/${idElementDell}`, {
+        method: "DELETE",
+        headers: {
+          "X-CSRF-Token": document.querySelector("meta[name='csrf-token']").content
+        }
+      }).then(response => {
+        if (response.ok) {
+          targetElementDell.remove();
+          console.log("deu certo!")
+        }
+      });
 
-    //   this.draggedElement = null;
-    // }
+      idElementDell = null;
+    }
   }
 }

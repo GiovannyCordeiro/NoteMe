@@ -18,9 +18,18 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    fetch_task
+    @task.destroy
+  end
+
   private
 
   def task_params
     params.require(:task).permit(:description)
+  end
+
+  def fetch_task
+    @task = Task.find(params[:id])
   end
 end
