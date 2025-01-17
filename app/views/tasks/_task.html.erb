@@ -1,0 +1,13 @@
+<%= turbo_frame_tag task, class: "w-2/12 h-2/6" do %>
+  <div
+    draggable="true"
+    class="w-full h-full p-6 bg-semantic-green rounded-lg flex flex-col justify-between drop-shadow-md"
+    data-controller="task"
+    data-action="dragstart->task#startDrag"
+    data-id="<%= task.id %>">
+    <p class="text-lg">
+      <%= task.description %>
+    </p>
+    <p class="text-sm">Feb, 10 2025</p>
+  </div>
+<% end %>
