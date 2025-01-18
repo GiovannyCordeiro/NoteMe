@@ -11,7 +11,7 @@
       <h2 class="text-3xl">Hello Fulano! 👋🏼</h2>
       <p class="mt-2">All your notes are here, in one place!</p>
     </div>
-    <div id="tasks" class="w-full h-full mt-12 flex flex-wrap gap-14 pl-16">
+    <div id="tasks" class="w-full h-full mt-12 flex flex-wrap gap-14 p9-16">
       <%= render 'new_task'%>
       <% @tasks.each do |task| %>
           <%= render 'task', task: task %>
