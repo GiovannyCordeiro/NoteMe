@@ -1,4 +1,14 @@
-<div>
-  <h1 class="font-bold text-4xl">Laddingpage#index</h1>
-  <p>Find me in app/views/laddingpage/index.html.erb</p>
+<div class="w-full h-screen flex flex-col items-center justify-center">
+  <div class="w-9/12 items-center justify-center px-10 flex gap-24">
+    <div class="w-1/2 h-full">
+      <%= image_tag 'manworking.png', class:"mb-10" %>
+      <h1 class="font-bold text-4xl mt-5">Keep life simple</h1>
+      <p class="mt-5 text-xl text-gray-400">Store all your notes in a simple and intuitive app that helps you enjoy what is most important in life.</p>
+    </div>
+    <div class="w-1/2 h-max flex flex-col items-center ">
+      <%= image_tag 'logo.png', class:"w-60 mb-14"%>
+      <%= link_to "Logar", new_user_session_path, class: 'w-9/12 h-12 flex items-center justify-center bg-semantic-green rounded-lg text-white mb-8'%>
+      <%= link_to "Nova conta", new_user_registration_path, class: 'w-9/12 h-12 flex items-center justify-center bg-rose text-white rounded-lg mb-8' %>
+    </div>
+  </div>
 </div>
