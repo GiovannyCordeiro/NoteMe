@@ -23,7 +23,7 @@ Créditos do design ao [Ruy Monteiro](https://www.figma.com/@ruymonteiro).
 - Ruby on Rails v8
 - Conta para configuração do Oauth 2.0 Google
 
-## 🎯 Setup projeto
+## 🎯 Setup do projeto
 
 - Faça a configuração de um projeto no Google Cloud e crie credenciais OAuth 2.
 - Coloque seu Client ID do Google no arquivo .env, na variável GOOGLE_OAUTH_CLIENT_ID.
